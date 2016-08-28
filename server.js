@@ -4,5 +4,7 @@ var server = http.createServer(function(req, res){
 	res.end("Hello World")
 });
 
-server.listen('8888');
-console.log('Server running on Port 8888')
+port = Number(process.env.PORT || 8888)
+
+server.listen(port);
+console.log('Server running');
